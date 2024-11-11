@@ -10,3 +10,5 @@ router.put('/update', authenticateToken, updateUser)
 router.delete('/delete', authenticateToken, deleteUser)
 
 module.exports = router
+
+.
