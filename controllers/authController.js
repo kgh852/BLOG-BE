@@ -48,7 +48,7 @@ const login = async (req, res) => {
         const accessToken = jwt.sign({ id }, 'access_secret_key', { expiresIn: '1h' })
         const refreshToken = jwt.sign({ id }, 'refresh_secret_key', { expiresIn: '7d' })  
 
-        res.status(200).json({ message: '로그인 성공', accessToken, refreshToken })  
+        res.status(200).json({ message: '로그인 성공', accessToken })  
     }
     catch (err) {
         res.status(err.statusCode).json({ message: err.message })

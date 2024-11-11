@@ -9,7 +9,7 @@ const {
     deletePost
 } = require('../controllers/postController'); 
 
-router.post('/', authenticateToken, createPost); 
+router.post('/create', authenticateToken, createPost); 
 router.get('/', getPosts); 
 router.get('/:id', getPostById); 
 router.put('/:id', authenticateToken, updatePost);
